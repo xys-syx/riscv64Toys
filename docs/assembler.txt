@@ -1,0 +1,150 @@
+﻿
+
+.file <filename>
+		.file (which may also be spelled `.app-file') tells as that we are about to start a new logical file. string is the new file name. In general, the filename is recognized whether or not it is surrounded by quotes `"'; but if you wish to specify an empty file name, you must give the quotes--"". This statement may go away in future: it is only recognized to be compatible with old as programs. In some configurations of as, .file has already been removed to avoid conflicts with other assemblers. See section Machine Dependent Features.
+
+.comm symbol, length
+
+.global symbol
+		.global makes the symbol visible to ld. If you define symbol in your partial program, its value is made available to other partial programs that are linked with it. Otherwise, symbol takes its attributes from a symbol of the same name from another file linked into the same program.
+
+.extern 
+		.extern is accepted in the source program--for compatibility with other assemblers--but it is ignored. as treats all undefined symbols as external.
+
+.line line-number
+		Change the logical line number. line-number must be an absolute expression. The next line has that logical line number. Therefore any other statements on the current line (after a statement separator character) are reported as on logical line number line-number - 1. One day as will no longer support this directive: it is recognized only for compatibility with existing assembler programs.
+
+.string "str"
+		 Copy the characters in str to the object file. You may specify more than one string to copy, separated by commas. Unless otherwise specified for a particular machine, the assembler marks the end of each string with a 0 byte. You can use any of the escape sequences described in section Strings. 
+
+.bss
+
+
+.half value
+.word value
+.dword value
+		Emits a half-word, word, or double-word value at the current position. 
+
+.byte 	expression [, expression]* 	8-bit comma separated words
+.2byte 	expression [, expression]* 	16-bit comma separated words
+.half 	expression [, expression]* 	16-bit comma separated words
+.short 	expression [, expression]* 	16-bit comma separated words
+.4byte 	expression [, expression]* 	32-bit comma separated words
+.word 	expression [, expression]* 	32-bit comma separated words
+.long 	expression [, expression]* 	32-bit comma separated words
+.8byte 	expression [, expression]* 	64-bit comma separated words
+.dword 	expression [, expression]* 	64-bit comma separated words
+.quad 	expression [, expression]* 	64-bit comma separated words
+.dtprelword 	expression [, expression]* 	32-bit thread local word
+.dtpreldword 	expression [, expression]* 	64-bit thread local word
+
+
+
+
+        
+
+The stack grows downwards (towards lower addresses) and 
+the stack pointer shall be aligned to a 128-bit boundary upon procedure entry. 
+The first argument passed on the stack is located at offset zero of the stack pointer on function entry; 
+following arguments are stored at correspondingly higher addresses.
+
+Registers s0-s11 shall be preserved across procedure calls.
+
+# On arguments passing
+
+Scalars that are at most XLEN bits wide are passed in a single argument register, or on the stack by value if none is available. When passed in registers or on the stack, integer scalars narrower than XLEN bits are widened according to the sign of their type up to 32 bits, then sign-extended to XLEN bits. When passed in registers or on the stack, floating-point types narrower than XLEN bits are widened to XLEN bits, with the upper bits undefined.
+
+Scalars that are 2×XLEN bits wide are passed in a pair of argument registers, with the low-order XLEN bits in the lower-numbered register and the high-order XLEN bits in the higher-numbered register. If no argument registers are available, the scalar is passed on the stack by value. If exactly one register is available, the low-order XLEN bits are passed in the register and the high-order XLEN bits are passed on the stack.
+
+Scalars wider than 2×XLEN bits are passed by reference and are replaced in the argument list with the address.
+
+Aggregates whose total size is no more than XLEN bits are passed in a register, with the fields laid out as though they were passed in memory. If no register is available, the aggregate is passed on the stack. Aggregates whose total size is no more than 2×XLEN bits are passed in a pair of registers; if only one register is available, the first XLEN bits are passed in a register and the remaining bits are passed on the stack. If no registers are available, the aggregate is passed on the stack. Bits unused due to padding, and bits past the end of an aggregate whose size in bits is not divisible by XLEN, are undefined.
+
+Aggregates or scalars passed on the stack are aligned to the greater of the type alignment and XLEN bits, but never more than the stack alignment.
+
+Aggregates larger than 2×XLEN bits are passed by reference and are replaced in the argument list with the address, as are C++ aggregates with nontrivial copy constructors, destructors, or vtables.
+
+
+
+		.text
+ 
+# Public variable allocation
+
+		.globl  x
+		.bss
+		.align  2
+		.type   x, @object
+		.size   x, 4
+x:
+		.zero   4
+
+# Public preinitilized variable
+
+        .globl  y
+        .data
+        .align  2
+        .type   y, @object
+        .size   y, 4
+y:
+        .word   703710
+
+# Local variable allocation
+
+		.bss
+        .align  2
+        .local  a
+        .comm   a,4,4
+        .align  2
+
+# Local preinitialized variable
+
+		.data
+        .align  2
+        .type   b, @object
+        .size   b, 4
+b:
+        .word   703710
+
+# Public constant allocation
+
+		.section        .rodata
+		.align  3
+.LC0:
+		.string "Hello!\n"
+
+# Local function
+
+        .text
+        .align  1
+        .type   test, @function
+test:
+        # the code comes here
+        .size   test, .-test
+
+# Public Function introduction
+
+		.text
+		.align  1
+		.globl  main
+		.type   main, @function
+main:
+		# the code comes here
+        .size   main, .-main
+
+
+# Function prologue
+
+f:
+        addi    sp,sp,-16       #,,
+        sd      ra,8(sp)        #,
+        sd      s0,0(sp)        #,
+        addi    s0,sp,16        #,,
+
+# Function epilogue
+        mv      a0,a5   #, <retval>
+        ld      ra,8(sp)                #,
+        ld      s0,0(sp)                #,
+        addi    sp,sp,16        #,,
+        jr      ra              #
+
+

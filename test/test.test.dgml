@@ -1,0 +1,11 @@
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml" Layout="Sugiyama" GraphDirection="TopToBottom" >
+<Nodes>
+<Node Id="0" Label="#0&#10;&#10;&#10;default to #1" />
+<Node Id="1" Label="#1&#10;&#10;L24C6| CALL(ENTITY_ID(&lt;write&gt;), LITERAL_INT(&lt;1&gt;), LITERAL_INT(&lt;2&gt;), LITERAL_INT(&lt;3&gt;))&#10;&#10;default to #2" />
+<Node Id="2" Label="#2&#10;&#10;" />
+</Nodes>
+<Links>
+<Link Source="0" Target="1" />
+<Link Source="1" Target="2" />
+</Links>
+</DirectedGraph>

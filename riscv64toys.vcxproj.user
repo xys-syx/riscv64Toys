@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemoteTarget>-1314309700;172.16.0.102 (username=, port=2222, authentication=Password)</RemoteTarget>
+    <RemoteDebuggerWorkingDirectory>/home/debian/projects/riscv64toys</RemoteDebuggerWorkingDirectory>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommandArguments>-s ./_debug.xml -c ./_debug.dgml -a ./_debug.clean.dgml -o ./_debug.asm ./test/test3.c</RemoteDebuggerCommandArguments>
+    <AdditionalDebuggerCommands>set environment ASAN_OPTIONS=detect_leaks=0;$(AdditionalDebuggerCommands)</AdditionalDebuggerCommands>
+    <RemoteDebuggingTarget>-1314309700;172.16.0.102 (username=, port=2222, authentication=Password)</RemoteDebuggingTarget>
+    <RemoteDebuggerCommand>$(RemoteBuildOutputs)</RemoteDebuggerCommand>
+  </PropertyGroup>
+</Project>
