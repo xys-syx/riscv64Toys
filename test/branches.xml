@@ -1,0 +1,502 @@
+<AST_LIST Line="2" Column="1" Position="2">
+<AST_DEF_FUNCTION_IMPL Line="2" Column="1" Position="2">
+<AST_DECL_SPECS Line="2" Column="1" Position="2">
+<AST_TYPE_INT Line="2" Column="1" Position="2">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="2" Column="5" Position="6">
+<AST_LIST Line="2" Column="5" Position="6">
+<AST_ID Line="2" Column="5" Position="6">
+main</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="2" Column="10" Position="11">
+<AST_LIST Line="2" Column="10" Position="11">
+<AST_DECLARATION_PARAM_ENTRY Line="2" Column="10" Position="11">
+<AST_DECL_SPECS Line="2" Column="10" Position="11">
+<AST_TYPE_INT Line="2" Column="10" Position="11">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="2" Column="14" Position="15">
+<AST_LIST Line="2" Column="14" Position="15">
+<AST_ID Line="2" Column="14" Position="15">
+argc</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="2" Column="20" Position="21">
+<AST_DECL_SPECS Line="2" Column="20" Position="21">
+<AST_TYPE_CHAR Line="2" Column="20" Position="21">
+char</AST_TYPE_CHAR>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="2" Column="27" Position="28">
+<AST_DECLARATION_PTR_SPEC Line="2" Column="27" Position="28">
+<AST_DECLARATION_PTR_SPEC Line="2" Column="27" Position="28">
+</AST_DECLARATION_PTR_SPEC>
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="2" Column="27" Position="28">
+<AST_ID Line="2" Column="27" Position="28">
+argv</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_STMT_BLOCK Line="4" Column="8" Position="45">
+<AST_STMT_EXPR Line="4" Column="8" Position="45">
+<AST_EXPR_LIST Line="4" Column="8" Position="45">
+<AST_EXPR_CALL Line="4" Column="8" Position="45">
+<AST_ID Line="4" Column="8" Position="45">
+printf</AST_ID>
+<AST_LIST Line="4" Column="9" Position="46">
+<AST_LITERAL_STRING Line="4" Column="9" Position="46">
+"1"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_WHILE Line="6" Column="8" Position="62">
+<AST_EXPR_LIST Line="6" Column="8" Position="62">
+<AST_LITERAL_INT Line="6" Column="8" Position="62">
+1</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BLOCK Line="8" Column="9" Position="78">
+<AST_STMT_EXPR Line="8" Column="9" Position="78">
+<AST_EXPR_LIST Line="8" Column="9" Position="78">
+<AST_EXPR_CALL Line="8" Column="9" Position="78">
+<AST_ID Line="8" Column="9" Position="78">
+printf</AST_ID>
+<AST_LIST Line="8" Column="10" Position="79">
+<AST_LITERAL_STRING Line="8" Column="10" Position="79">
+"2"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_WHILE Line="10" Column="9" Position="98">
+<AST_EXPR_LIST Line="10" Column="9" Position="98">
+<AST_LITERAL_INT Line="10" Column="9" Position="98">
+2</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BLOCK Line="12" Column="10" Position="116">
+<AST_STMT_EXPR Line="12" Column="10" Position="116">
+<AST_EXPR_LIST Line="12" Column="10" Position="116">
+<AST_EXPR_CALL Line="12" Column="10" Position="116">
+<AST_ID Line="12" Column="10" Position="116">
+printf</AST_ID>
+<AST_LIST Line="12" Column="11" Position="117">
+<AST_LITERAL_STRING Line="12" Column="11" Position="117">
+"3"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_IF Line="14" Column="7" Position="135">
+<AST_EXPR_LIST Line="14" Column="7" Position="135">
+<AST_LITERAL_INT Line="14" Column="7" Position="135">
+3</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BREAK Line="15" Column="10" Position="148">
+</AST_STMT_BREAK>
+<AST_STMT_IF Line="16" Column="13" Position="163">
+<AST_EXPR_LIST Line="16" Column="13" Position="163">
+<AST_LITERAL_INT Line="16" Column="13" Position="163">
+4</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_CONTINUE Line="17" Column="13" Position="179">
+</AST_STMT_CONTINUE>
+<AST_STMT_BLOCK Line="21" Column="16" Position="222">
+<AST_STMT_LABELED Line="21" Column="16" Position="222">
+<AST_ID Line="21" Column="16" Position="222">
+labb</AST_ID>
+<AST_STMT_EXPR Line="21" Column="11" Position="217">
+<AST_EXPR_LIST Line="21" Column="11" Position="217">
+<AST_EXPR_CALL Line="21" Column="11" Position="217">
+<AST_ID Line="21" Column="11" Position="217">
+printf</AST_ID>
+<AST_LIST Line="21" Column="12" Position="218">
+<AST_LITERAL_STRING Line="21" Column="12" Position="218">
+"4"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_LABELED>
+</AST_STMT_BLOCK>
+</AST_STMT_IF>
+</AST_STMT_IF>
+</AST_STMT_BLOCK>
+</AST_STMT_WHILE>
+<AST_STMT_EXPR Line="25" Column="9" Position="246">
+<AST_EXPR_LIST Line="25" Column="9" Position="246">
+<AST_EXPR_CALL Line="25" Column="9" Position="246">
+<AST_ID Line="25" Column="9" Position="246">
+printf</AST_ID>
+<AST_LIST Line="25" Column="10" Position="247">
+<AST_LITERAL_STRING Line="25" Column="10" Position="247">
+"5"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_IF Line="27" Column="6" Position="266">
+<AST_EXPR_LIST Line="27" Column="6" Position="266">
+<AST_LITERAL_INT Line="27" Column="6" Position="266">
+5</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BREAK Line="28" Column="9" Position="278">
+</AST_STMT_BREAK>
+<AST_STMT_IF Line="29" Column="12" Position="292">
+<AST_EXPR_LIST Line="29" Column="12" Position="292">
+<AST_LITERAL_INT Line="29" Column="12" Position="292">
+6</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_CONTINUE Line="30" Column="12" Position="307">
+</AST_STMT_CONTINUE>
+<AST_STMT_EXPR Line="32" Column="10" Position="327">
+<AST_EXPR_LIST Line="32" Column="10" Position="327">
+<AST_EXPR_CALL Line="32" Column="10" Position="327">
+<AST_ID Line="32" Column="10" Position="327">
+printf</AST_ID>
+<AST_LIST Line="32" Column="11" Position="328">
+<AST_LITERAL_STRING Line="32" Column="11" Position="328">
+"6"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_IF>
+</AST_STMT_IF>
+<AST_STMT_EXPR Line="34" Column="9" Position="345">
+<AST_EXPR_LIST Line="34" Column="9" Position="345">
+<AST_EXPR_CALL Line="34" Column="9" Position="345">
+<AST_ID Line="34" Column="9" Position="345">
+printf</AST_ID>
+<AST_LIST Line="34" Column="10" Position="346">
+<AST_LITERAL_STRING Line="34" Column="10" Position="346">
+"7"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_DO Line="38" Column="10" Position="375">
+<AST_STMT_BLOCK Line="38" Column="10" Position="375">
+<AST_STMT_EXPR Line="38" Column="10" Position="375">
+<AST_EXPR_LIST Line="38" Column="10" Position="375">
+<AST_EXPR_CALL Line="38" Column="10" Position="375">
+<AST_ID Line="38" Column="10" Position="375">
+printf</AST_ID>
+<AST_LIST Line="38" Column="11" Position="376">
+<AST_LITERAL_STRING Line="38" Column="11" Position="376">
+"8"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_IF Line="39" Column="8" Position="390">
+<AST_EXPR_LIST Line="39" Column="8" Position="390">
+<AST_LITERAL_INT Line="39" Column="8" Position="390">
+9</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BREAK Line="40" Column="10" Position="403">
+</AST_STMT_BREAK>
+</AST_STMT_IF>
+</AST_STMT_BLOCK>
+<AST_EXPR_LIST Line="41" Column="11" Position="416">
+<AST_LITERAL_INT Line="41" Column="11" Position="416">
+10</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+</AST_STMT_DO>
+<AST_STMT_EXPR Line="43" Column="9" Position="432">
+<AST_EXPR_LIST Line="43" Column="9" Position="432">
+<AST_EXPR_CALL Line="43" Column="9" Position="432">
+<AST_ID Line="43" Column="9" Position="432">
+printf</AST_ID>
+<AST_LIST Line="43" Column="10" Position="433">
+<AST_LITERAL_STRING Line="43" Column="10" Position="433">
+"11"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_IF Line="45" Column="6" Position="448">
+<AST_EXPR_LIST Line="45" Column="6" Position="448">
+<AST_LITERAL_INT Line="45" Column="6" Position="448">
+11</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_BREAK Line="46" Column="9" Position="461">
+</AST_STMT_BREAK>
+<AST_STMT_IF Line="47" Column="12" Position="475">
+<AST_EXPR_LIST Line="47" Column="12" Position="475">
+<AST_LITERAL_INT Line="47" Column="12" Position="475">
+12</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_CONTINUE Line="48" Column="12" Position="491">
+</AST_STMT_CONTINUE>
+<AST_STMT_BLOCK Line="51" Column="10" Position="516">
+<AST_STMT_EXPR Line="51" Column="10" Position="516">
+<AST_EXPR_LIST Line="51" Column="10" Position="516">
+<AST_EXPR_CALL Line="51" Column="10" Position="516">
+<AST_ID Line="51" Column="10" Position="516">
+printf</AST_ID>
+<AST_LIST Line="51" Column="11" Position="517">
+<AST_LITERAL_STRING Line="51" Column="11" Position="517">
+"12"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_GOTO Line="52" Column="13" Position="537">
+<AST_ID Line="52" Column="13" Position="537">
+labb</AST_ID>
+</AST_STMT_GOTO>
+</AST_STMT_BLOCK>
+</AST_STMT_IF>
+</AST_STMT_IF>
+<AST_STMT_EXPR Line="55" Column="9" Position="555">
+<AST_EXPR_LIST Line="55" Column="9" Position="555">
+<AST_EXPR_CALL Line="55" Column="9" Position="555">
+<AST_ID Line="55" Column="9" Position="555">
+printf</AST_ID>
+<AST_LIST Line="55" Column="10" Position="556">
+<AST_LITERAL_STRING Line="55" Column="10" Position="556">
+"13"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+</AST_STMT_WHILE>
+<AST_STMT_EXPR Line="59" Column="8" Position="582">
+<AST_EXPR_LIST Line="59" Column="8" Position="582">
+<AST_EXPR_CALL Line="59" Column="8" Position="582">
+<AST_ID Line="59" Column="8" Position="582">
+printf</AST_ID>
+<AST_LIST Line="59" Column="9" Position="583">
+<AST_LITERAL_STRING Line="59" Column="9" Position="583">
+"14"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_LABELED Line="71" Column="2" Position="685">
+<AST_ID Line="71" Column="2" Position="685">
+lab</AST_ID>
+<AST_STMT_IF Line="63" Column="6" Position="608">
+<AST_EXPR_LIST Line="63" Column="6" Position="608">
+<AST_EXPR_CMP_GT Line="63" Column="6" Position="608">
+<AST_ID Line="63" Column="6" Position="608">
+a</AST_ID>
+<AST_LITERAL_INT Line="63" Column="10" Position="612">
+3</AST_LITERAL_INT>
+</AST_EXPR_CMP_GT>
+</AST_EXPR_LIST>
+<AST_STMT_BLOCK Line="65" Column="9" Position="628">
+<AST_STMT_EXPR Line="65" Column="9" Position="628">
+<AST_EXPR_LIST Line="65" Column="9" Position="628">
+<AST_EXPR_CALL Line="65" Column="9" Position="628">
+<AST_ID Line="65" Column="9" Position="628">
+printf</AST_ID>
+<AST_LIST Line="65" Column="10" Position="629">
+<AST_LITERAL_STRING Line="65" Column="10" Position="629">
+"1\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+<AST_STMT_BLOCK Line="69" Column="9" Position="661">
+<AST_STMT_EXPR Line="69" Column="9" Position="661">
+<AST_EXPR_LIST Line="69" Column="9" Position="661">
+<AST_EXPR_CALL Line="69" Column="9" Position="661">
+<AST_ID Line="69" Column="9" Position="661">
+printf</AST_ID>
+<AST_LIST Line="69" Column="10" Position="662">
+<AST_LITERAL_STRING Line="69" Column="10" Position="662">
+"2\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_GOTO Line="70" Column="11" Position="681">
+<AST_ID Line="70" Column="11" Position="681">
+lab</AST_ID>
+</AST_STMT_GOTO>
+</AST_STMT_BLOCK>
+</AST_STMT_IF>
+</AST_STMT_LABELED>
+<AST_STMT_FOR Line="1" Column="1" Position="0">
+<AST_STMT_EMPTY Line="1" Column="1" Position="0">
+</AST_STMT_EMPTY>
+<AST_STMT_EXPR Line="73" Column="9" Position="698">
+<AST_EXPR_LIST Line="73" Column="9" Position="698">
+<AST_EXPR_CMP_LT Line="73" Column="9" Position="698">
+<AST_ID Line="73" Column="9" Position="698">
+i</AST_ID>
+<AST_LITERAL_INT Line="73" Column="13" Position="702">
+10</AST_LITERAL_INT>
+</AST_EXPR_CMP_LT>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_BLOCK Line="75" Column="7" Position="719">
+<AST_STMT_IF Line="75" Column="7" Position="719">
+<AST_EXPR_LIST Line="75" Column="7" Position="719">
+<AST_EXPR_CMP_GT Line="75" Column="7" Position="719">
+<AST_ID Line="75" Column="7" Position="719">
+x</AST_ID>
+<AST_ID Line="75" Column="11" Position="723">
+b</AST_ID>
+</AST_EXPR_CMP_GT>
+</AST_EXPR_LIST>
+<AST_STMT_EXPR Line="76" Column="7" Position="733">
+<AST_EXPR_LIST Line="76" Column="7" Position="733">
+<AST_EXPR_ASS_PLUS Line="76" Column="7" Position="733">
+<AST_ID Line="76" Column="7" Position="733">
+i</AST_ID>
+<AST_LITERAL_INT Line="76" Column="10" Position="736">
+2</AST_LITERAL_INT>
+</AST_EXPR_ASS_PLUS>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_IF Line="77" Column="12" Position="751">
+<AST_EXPR_LIST Line="77" Column="12" Position="751">
+<AST_EXPR_MUL Line="77" Column="12" Position="751">
+<AST_LITERAL_INT Line="77" Column="12" Position="751">
+2</AST_LITERAL_INT>
+<AST_LITERAL_INT Line="77" Column="16" Position="755">
+3</AST_LITERAL_INT>
+</AST_EXPR_MUL>
+</AST_EXPR_LIST>
+<AST_STMT_BREAK Line="78" Column="9" Position="767">
+</AST_STMT_BREAK>
+<AST_STMT_CONTINUE Line="80" Column="12" Position="789">
+</AST_STMT_CONTINUE>
+</AST_STMT_IF>
+</AST_STMT_IF>
+</AST_STMT_BLOCK>
+</AST_STMT_FOR>
+<AST_STMT_IF Line="84" Column="6" Position="806">
+<AST_EXPR_LIST Line="84" Column="6" Position="806">
+<AST_LITERAL_INT Line="84" Column="6" Position="806">
+1</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_IF Line="85" Column="6" Position="815">
+<AST_EXPR_LIST Line="85" Column="6" Position="815">
+<AST_LITERAL_INT Line="85" Column="6" Position="815">
+2</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_IF Line="86" Column="7" Position="825">
+<AST_EXPR_LIST Line="86" Column="7" Position="825">
+<AST_LITERAL_INT Line="86" Column="7" Position="825">
+3</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+<AST_STMT_EXPR Line="87" Column="6" Position="834">
+<AST_EXPR_LIST Line="87" Column="6" Position="834">
+<AST_EXPR_CALL Line="87" Column="6" Position="834">
+<AST_ID Line="87" Column="6" Position="834">
+x</AST_ID>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_EXPR Line="89" Column="6" Position="853">
+<AST_EXPR_LIST Line="89" Column="6" Position="853">
+<AST_EXPR_CALL Line="89" Column="6" Position="853">
+<AST_ID Line="89" Column="6" Position="853">
+y</AST_ID>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_IF>
+<AST_STMT_EXPR Line="92" Column="5" Position="872">
+<AST_EXPR_LIST Line="92" Column="5" Position="872">
+<AST_EXPR_CALL Line="92" Column="5" Position="872">
+<AST_ID Line="92" Column="5" Position="872">
+z</AST_ID>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_IF>
+</AST_STMT_IF>
+<AST_STMT_IF Line="96" Column="6" Position="889">
+<AST_EXPR_LIST Line="96" Column="6" Position="889">
+<AST_EXPR_CMP_GT Line="96" Column="6" Position="889">
+<AST_ID Line="96" Column="6" Position="889">
+a</AST_ID>
+<AST_LITERAL_INT Line="96" Column="10" Position="893">
+3</AST_LITERAL_INT>
+</AST_EXPR_CMP_GT>
+</AST_EXPR_LIST>
+<AST_STMT_BLOCK Line="98" Column="9" Position="909">
+<AST_STMT_EXPR Line="98" Column="9" Position="909">
+<AST_EXPR_LIST Line="98" Column="9" Position="909">
+<AST_EXPR_CALL Line="98" Column="9" Position="909">
+<AST_ID Line="98" Column="9" Position="909">
+printf</AST_ID>
+<AST_LIST Line="98" Column="10" Position="910">
+<AST_LITERAL_STRING Line="98" Column="10" Position="910">
+"1\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+<AST_STMT_BLOCK Line="102" Column="9" Position="942">
+<AST_STMT_EXPR Line="102" Column="9" Position="942">
+<AST_EXPR_LIST Line="102" Column="9" Position="942">
+<AST_EXPR_CALL Line="102" Column="9" Position="942">
+<AST_ID Line="102" Column="9" Position="942">
+printf</AST_ID>
+<AST_LIST Line="102" Column="10" Position="943">
+<AST_LITERAL_STRING Line="102" Column="10" Position="943">
+"2\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+</AST_STMT_IF>
+<AST_STMT_WHILE Line="105" Column="9" Position="966">
+<AST_EXPR_LIST Line="105" Column="9" Position="966">
+<AST_EXPR_CMP_LT Line="105" Column="9" Position="966">
+<AST_ID Line="105" Column="9" Position="966">
+a</AST_ID>
+<AST_LITERAL_INT Line="105" Column="13" Position="970">
+3</AST_LITERAL_INT>
+</AST_EXPR_CMP_LT>
+</AST_EXPR_LIST>
+<AST_STMT_BLOCK Line="107" Column="9" Position="986">
+<AST_STMT_EXPR Line="107" Column="9" Position="986">
+<AST_EXPR_LIST Line="107" Column="9" Position="986">
+<AST_EXPR_CALL Line="107" Column="9" Position="986">
+<AST_ID Line="107" Column="9" Position="986">
+printf</AST_ID>
+<AST_LIST Line="107" Column="10" Position="987">
+<AST_LITERAL_STRING Line="107" Column="10" Position="987">
+"3\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+</AST_STMT_WHILE>
+<AST_STMT_EXPR Line="110" Column="8" Position="1009">
+<AST_EXPR_LIST Line="110" Column="8" Position="1009">
+<AST_EXPR_CALL Line="110" Column="8" Position="1009">
+<AST_ID Line="110" Column="8" Position="1009">
+printf</AST_ID>
+<AST_LIST Line="110" Column="9" Position="1010">
+<AST_LITERAL_STRING Line="110" Column="9" Position="1010">
+"Hello!\n"</AST_LITERAL_STRING>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_RETURN Line="112" Column="9" Position="1035">
+<AST_EXPR_LIST Line="112" Column="9" Position="1035">
+<AST_LITERAL_INT Line="112" Column="9" Position="1035">
+0</AST_LITERAL_INT>
+</AST_EXPR_LIST>
+</AST_STMT_RETURN>
+</AST_STMT_BLOCK>
+</AST_DEF_FUNCTION_IMPL>
+</AST_LIST>

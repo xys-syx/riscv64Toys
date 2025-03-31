@@ -1,0 +1,7 @@
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml" Layout="Sugiyama" GraphDirection="TopToBottom" >
+<Nodes>
+<Node Id="0" Label="#0&#10;&#10;L34C8| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;pubVar&gt;), [signed int]LITERAL_INT(&lt;123&gt;))&#10;L35C9| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;privVar&gt;), [signed int]LITERAL_INT(&lt;456&gt;))&#10;L37C5| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;stdinfd&gt;), [signed int]LITERAL_INT(&lt;0&gt;))&#10;L38C5| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;stdoutfd&gt;), [signed int]LITERAL_INT(&lt;1&gt;))&#10;L39C5| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;stderrfd&gt;), [signed int]LITERAL_INT(&lt;2&gt;))&#10;L41C7| [char*]ASSIGN([char*]ENTITY_ID(var &lt;str&gt;), [char*]LITERAL_STRING(&lt;&quot;Hello!\n&quot;&gt;))&#10;L43C6| [signed int]CALL([(signed int)&lt;func&gt;signed int,void*,signed int)]ENTITY_ID(func &lt;write&gt;), [signed int]ENTITY_ID(var &lt;stdoutfd&gt;), [char*]ENTITY_ID(var &lt;str&gt;), [signed int]LITERAL_INT(&lt;7&gt;))&#10;L45C5| [signed int]ASSIGN([signed int]ENTITY_ID(var &lt;x&gt;), [signed int]ADD([signed int]LITERAL_INT(&lt;3&gt;), [signed int]LITERAL_INT(&lt;5&gt;)))&#10;L49C8| [signed int]RET([signed int]MUL([signed int]ENTITY_ID(var &lt;x&gt;), [signed int]LITERAL_INT(&lt;2&gt;)))&#10;&#10;returns value." />
+</Nodes>
+<Links>
+</Links>
+</DirectedGraph>

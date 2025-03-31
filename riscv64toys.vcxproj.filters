@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="cfg.h" />
+    <ClInclude Include="ast.h" />
+    <ClInclude Include="c99.l.gen.h" />
+    <ClInclude Include="c99.y.gen.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="collections.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="model.h" />
+    <ClInclude Include="code.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="c99.l" />
+    <None Include="c99.y" />
+    <None Include="test.sh" />
+    <None Include="test-all.sh" />
+    <None Include="test-one.sh" />
+    <None Include="test-on-risc.sh" />
+    <None Include="test\Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="utils.c" />
+    <ClCompile Include="cfg.c" />
+    <ClCompile Include="ast.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="c99.l.gen.c" />
+    <ClCompile Include="c99.y.gen.c" />
+    <ClCompile Include="types.c" />
+    <ClCompile Include="collections.c" />
+    <ClCompile Include="test.c" />
+    <ClCompile Include="model.c" />
+    <ClCompile Include="code.c" />
+    <ClCompile Include="test\test2.c" />
+    <ClCompile Include="test\test3.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test\test.c" />
+    <Text Include="test\types.c" />
+    <Text Include="test\branches.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="test\test.xml" />
+  </ItemGroup>
+</Project>

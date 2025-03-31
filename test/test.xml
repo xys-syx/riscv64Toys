@@ -1,0 +1,452 @@
+<AST_LIST Line="7" Column="1" Position="77">
+<AST_DECLARATION Line="7" Column="1" Position="77">
+<AST_DECL_SPECS Line="7" Column="1" Position="77">
+<AST_TYPE_INT Line="7" Column="1" Position="77">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="7" Column="5" Position="81">
+<AST_DECLARATION_VALUE_PLACE Line="7" Column="5" Position="81">
+<AST_DECLARATION_ENTRY Line="7" Column="5" Position="81">
+<AST_LIST Line="7" Column="5" Position="81">
+<AST_ID Line="7" Column="5" Position="81">
+open</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="7" Column="10" Position="86">
+<AST_LIST Line="7" Column="10" Position="86">
+<AST_DECLARATION_PARAM_ENTRY Line="7" Column="10" Position="86">
+<AST_DECL_SPECS Line="7" Column="10" Position="86">
+<AST_TYPE_CHAR Line="7" Column="10" Position="86">
+char</AST_TYPE_CHAR>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="7" Column="16" Position="92">
+<AST_DECLARATION_PTR_SPEC Line="7" Column="16" Position="92">
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="7" Column="16" Position="92">
+<AST_ID Line="7" Column="16" Position="92">
+pathname</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="7" Column="26" Position="102">
+<AST_DECL_SPECS Line="7" Column="26" Position="102">
+<AST_TYPE_INT Line="7" Column="26" Position="102">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="7" Column="30" Position="106">
+<AST_LIST Line="7" Column="30" Position="106">
+<AST_ID Line="7" Column="30" Position="106">
+flags</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="10" Column="1" Position="177">
+<AST_DECL_SPECS Line="10" Column="1" Position="177">
+<AST_TYPE_INT Line="10" Column="1" Position="177">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="10" Column="5" Position="181">
+<AST_DECLARATION_VALUE_PLACE Line="10" Column="5" Position="181">
+<AST_DECLARATION_ENTRY Line="10" Column="5" Position="181">
+<AST_LIST Line="10" Column="5" Position="181">
+<AST_ID Line="10" Column="5" Position="181">
+close</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="10" Column="11" Position="187">
+<AST_LIST Line="10" Column="11" Position="187">
+<AST_DECLARATION_PARAM_ENTRY Line="10" Column="11" Position="187">
+<AST_DECL_SPECS Line="10" Column="11" Position="187">
+<AST_TYPE_INT Line="10" Column="11" Position="187">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="10" Column="15" Position="191">
+<AST_LIST Line="10" Column="15" Position="191">
+<AST_ID Line="10" Column="15" Position="191">
+fd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="13" Column="1" Position="250">
+<AST_DECL_SPECS Line="13" Column="1" Position="250">
+<AST_TYPE_INT Line="13" Column="1" Position="250">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="13" Column="5" Position="254">
+<AST_DECLARATION_VALUE_PLACE Line="13" Column="5" Position="254">
+<AST_DECLARATION_ENTRY Line="13" Column="5" Position="254">
+<AST_LIST Line="13" Column="5" Position="254">
+<AST_ID Line="13" Column="5" Position="254">
+read</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="13" Column="10" Position="259">
+<AST_LIST Line="13" Column="10" Position="259">
+<AST_DECLARATION_PARAM_ENTRY Line="13" Column="10" Position="259">
+<AST_DECL_SPECS Line="13" Column="10" Position="259">
+<AST_TYPE_INT Line="13" Column="10" Position="259">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="13" Column="14" Position="263">
+<AST_LIST Line="13" Column="14" Position="263">
+<AST_ID Line="13" Column="14" Position="263">
+fd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="13" Column="18" Position="267">
+<AST_DECL_SPECS Line="13" Column="18" Position="267">
+<AST_TYPE_VOID Line="13" Column="18" Position="267">
+void</AST_TYPE_VOID>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="13" Column="24" Position="273">
+<AST_DECLARATION_PTR_SPEC Line="13" Column="24" Position="273">
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="13" Column="24" Position="273">
+<AST_ID Line="13" Column="24" Position="273">
+buf</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="13" Column="29" Position="278">
+<AST_DECL_SPECS Line="13" Column="29" Position="278">
+<AST_TYPE_INT Line="13" Column="29" Position="278">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="13" Column="33" Position="282">
+<AST_LIST Line="13" Column="33" Position="282">
+<AST_ID Line="13" Column="33" Position="282">
+count</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="16" Column="1" Position="348">
+<AST_DECL_SPECS Line="16" Column="1" Position="348">
+<AST_TYPE_INT Line="16" Column="1" Position="348">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="16" Column="5" Position="352">
+<AST_DECLARATION_VALUE_PLACE Line="16" Column="5" Position="352">
+<AST_DECLARATION_ENTRY Line="16" Column="5" Position="352">
+<AST_LIST Line="16" Column="5" Position="352">
+<AST_ID Line="16" Column="5" Position="352">
+write</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="16" Column="11" Position="358">
+<AST_LIST Line="16" Column="11" Position="358">
+<AST_DECLARATION_PARAM_ENTRY Line="16" Column="11" Position="358">
+<AST_DECL_SPECS Line="16" Column="11" Position="358">
+<AST_TYPE_INT Line="16" Column="11" Position="358">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="16" Column="15" Position="362">
+<AST_LIST Line="16" Column="15" Position="362">
+<AST_ID Line="16" Column="15" Position="362">
+fd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="16" Column="19" Position="366">
+<AST_DECL_SPECS Line="16" Column="19" Position="366">
+<AST_TYPE_VOID Line="16" Column="19" Position="366">
+void</AST_TYPE_VOID>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="16" Column="25" Position="372">
+<AST_DECLARATION_PTR_SPEC Line="16" Column="25" Position="372">
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="16" Column="25" Position="372">
+<AST_ID Line="16" Column="25" Position="372">
+buf</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="16" Column="30" Position="377">
+<AST_DECL_SPECS Line="16" Column="30" Position="377">
+<AST_TYPE_INT Line="16" Column="30" Position="377">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="16" Column="34" Position="381">
+<AST_LIST Line="16" Column="34" Position="381">
+<AST_ID Line="16" Column="34" Position="381">
+count</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="19" Column="1" Position="394">
+<AST_DECL_SPECS Line="19" Column="1" Position="394">
+<AST_TYPE_INT Line="19" Column="1" Position="394">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="19" Column="5" Position="398">
+<AST_DECLARATION_VALUE_PLACE Line="19" Column="5" Position="398">
+<AST_DECLARATION_ENTRY Line="19" Column="5" Position="398">
+<AST_LIST Line="19" Column="5" Position="398">
+<AST_ID Line="19" Column="5" Position="398">
+pubVar</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="20" Column="1" Position="407">
+<AST_DECL_SPECS Line="20" Column="1" Position="407">
+<AST_SSPEC_KW_STATIC Line="20" Column="1" Position="407">
+static</AST_SSPEC_KW_STATIC>
+<AST_TYPE_INT Line="20" Column="8" Position="414">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="20" Column="12" Position="418">
+<AST_DECLARATION_VALUE_PLACE Line="20" Column="12" Position="418">
+<AST_DECLARATION_ENTRY Line="20" Column="12" Position="418">
+<AST_LIST Line="20" Column="12" Position="418">
+<AST_ID Line="20" Column="12" Position="418">
+privVar</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DEF_FUNCTION_IMPL Line="23" Column="1" Position="458">
+<AST_DECL_SPECS Line="23" Column="1" Position="458">
+<AST_TYPE_INT Line="23" Column="1" Position="458">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="23" Column="5" Position="462">
+<AST_LIST Line="23" Column="5" Position="462">
+<AST_ID Line="23" Column="5" Position="462">
+test</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="1" Column="1" Position="0">
+<AST_LIST Line="1" Column="1" Position="0">
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_STMT_BLOCK Line="25" Column="7" Position="479">
+<AST_STMT_EXPR Line="25" Column="7" Position="479">
+<AST_EXPR_LIST Line="25" Column="7" Position="479">
+<AST_EXPR_CALL Line="25" Column="7" Position="479">
+<AST_ID Line="25" Column="7" Position="479">
+write</AST_ID>
+<AST_LIST Line="25" Column="8" Position="480">
+<AST_LITERAL_INT Line="25" Column="8" Position="480">
+1</AST_LITERAL_INT>
+<AST_LITERAL_INT Line="25" Column="11" Position="483">
+2</AST_LITERAL_INT>
+<AST_LITERAL_INT Line="25" Column="14" Position="486">
+3</AST_LITERAL_INT>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+</AST_STMT_BLOCK>
+</AST_DEF_FUNCTION_IMPL>
+<AST_DEF_FUNCTION_IMPL Line="31" Column="1" Position="543">
+<AST_DECL_SPECS Line="31" Column="1" Position="543">
+<AST_TYPE_INT Line="31" Column="1" Position="543">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="31" Column="5" Position="547">
+<AST_LIST Line="31" Column="5" Position="547">
+<AST_ID Line="31" Column="5" Position="547">
+main</AST_ID>
+<AST_DECLARATION_PARAMS_SPEC Line="31" Column="10" Position="552">
+<AST_LIST Line="31" Column="10" Position="552">
+<AST_DECLARATION_PARAM_ENTRY Line="31" Column="10" Position="552">
+<AST_DECL_SPECS Line="31" Column="10" Position="552">
+<AST_TYPE_INT Line="31" Column="10" Position="552">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="31" Column="14" Position="556">
+<AST_LIST Line="31" Column="14" Position="556">
+<AST_ID Line="31" Column="14" Position="556">
+argc</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+<AST_DECLARATION_PARAM_ENTRY Line="31" Column="20" Position="562">
+<AST_DECL_SPECS Line="31" Column="20" Position="562">
+<AST_TYPE_CHAR Line="31" Column="20" Position="562">
+char</AST_TYPE_CHAR>
+</AST_DECL_SPECS>
+<AST_DECLARATION_ENTRY Line="31" Column="27" Position="569">
+<AST_DECLARATION_PTR_SPEC Line="31" Column="27" Position="569">
+<AST_DECLARATION_PTR_SPEC Line="31" Column="27" Position="569">
+</AST_DECLARATION_PTR_SPEC>
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="31" Column="27" Position="569">
+<AST_ID Line="31" Column="27" Position="569">
+argv</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+</AST_DECLARATION_PARAM_ENTRY>
+</AST_LIST>
+</AST_DECLARATION_PARAMS_SPEC>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_STMT_BLOCK Line="35" Column="9" Position="602">
+<AST_STMT_EXPR Line="35" Column="9" Position="602">
+<AST_EXPR_LIST Line="35" Column="9" Position="602">
+<AST_EXPR_ASSIGN Line="35" Column="9" Position="602">
+<AST_ID Line="35" Column="9" Position="602">
+pubVar</AST_ID>
+<AST_LITERAL_INT Line="35" Column="11" Position="604">
+123</AST_LITERAL_INT>
+</AST_EXPR_ASSIGN>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_STMT_EXPR Line="36" Column="10" Position="619">
+<AST_EXPR_LIST Line="36" Column="10" Position="619">
+<AST_EXPR_ASSIGN Line="36" Column="10" Position="619">
+<AST_ID Line="36" Column="10" Position="619">
+privVar</AST_ID>
+<AST_LITERAL_INT Line="36" Column="12" Position="621">
+456</AST_LITERAL_INT>
+</AST_EXPR_ASSIGN>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_DECLARATION Line="38" Column="2" Position="649">
+<AST_DECL_SPECS Line="38" Column="2" Position="649">
+<AST_TYPE_INT Line="38" Column="2" Position="649">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="38" Column="6" Position="653">
+<AST_DECLARATION_VALUE_PLACE Line="38" Column="6" Position="653">
+<AST_DECLARATION_ENTRY Line="38" Column="6" Position="653">
+<AST_LIST Line="38" Column="6" Position="653">
+<AST_ID Line="38" Column="6" Position="653">
+stdinfd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_LITERAL_INT Line="38" Column="16" Position="663">
+0</AST_LITERAL_INT>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="39" Column="2" Position="668">
+<AST_DECL_SPECS Line="39" Column="2" Position="668">
+<AST_TYPE_INT Line="39" Column="2" Position="668">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="39" Column="6" Position="672">
+<AST_DECLARATION_VALUE_PLACE Line="39" Column="6" Position="672">
+<AST_DECLARATION_ENTRY Line="39" Column="6" Position="672">
+<AST_LIST Line="39" Column="6" Position="672">
+<AST_ID Line="39" Column="6" Position="672">
+stdoutfd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_LITERAL_INT Line="39" Column="17" Position="683">
+1</AST_LITERAL_INT>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="40" Column="2" Position="688">
+<AST_DECL_SPECS Line="40" Column="2" Position="688">
+<AST_TYPE_INT Line="40" Column="2" Position="688">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="40" Column="6" Position="692">
+<AST_DECLARATION_VALUE_PLACE Line="40" Column="6" Position="692">
+<AST_DECLARATION_ENTRY Line="40" Column="6" Position="692">
+<AST_LIST Line="40" Column="6" Position="692">
+<AST_ID Line="40" Column="6" Position="692">
+stderrfd</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_LITERAL_INT Line="40" Column="17" Position="703">
+2</AST_LITERAL_INT>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_DECLARATION Line="42" Column="2" Position="711">
+<AST_DECL_SPECS Line="42" Column="2" Position="711">
+<AST_TYPE_CHAR Line="42" Column="2" Position="711">
+char</AST_TYPE_CHAR>
+</AST_DECL_SPECS>
+<AST_LIST Line="42" Column="8" Position="717">
+<AST_DECLARATION_VALUE_PLACE Line="42" Column="8" Position="717">
+<AST_DECLARATION_ENTRY Line="42" Column="8" Position="717">
+<AST_DECLARATION_PTR_SPEC Line="42" Column="8" Position="717">
+</AST_DECLARATION_PTR_SPEC>
+<AST_LIST Line="42" Column="8" Position="717">
+<AST_ID Line="42" Column="8" Position="717">
+str</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_LITERAL_STRING Line="42" Column="14" Position="723">
+"Hello!\n"</AST_LITERAL_STRING>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_STMT_EXPR Line="44" Column="7" Position="744">
+<AST_EXPR_LIST Line="44" Column="7" Position="744">
+<AST_EXPR_CALL Line="44" Column="7" Position="744">
+<AST_ID Line="44" Column="7" Position="744">
+write</AST_ID>
+<AST_LIST Line="44" Column="8" Position="745">
+<AST_ID Line="44" Column="8" Position="745">
+stdoutfd</AST_ID>
+<AST_ID Line="44" Column="18" Position="755">
+str</AST_ID>
+<AST_LITERAL_INT Line="44" Column="23" Position="760">
+7</AST_LITERAL_INT>
+</AST_LIST>
+</AST_EXPR_CALL>
+</AST_EXPR_LIST>
+</AST_STMT_EXPR>
+<AST_DECLARATION Line="46" Column="2" Position="768">
+<AST_DECL_SPECS Line="46" Column="2" Position="768">
+<AST_TYPE_INT Line="46" Column="2" Position="768">
+int</AST_TYPE_INT>
+</AST_DECL_SPECS>
+<AST_LIST Line="46" Column="6" Position="772">
+<AST_DECLARATION_VALUE_PLACE Line="46" Column="6" Position="772">
+<AST_DECLARATION_ENTRY Line="46" Column="6" Position="772">
+<AST_LIST Line="46" Column="6" Position="772">
+<AST_ID Line="46" Column="6" Position="772">
+x</AST_ID>
+</AST_LIST>
+</AST_DECLARATION_ENTRY>
+<AST_EXPR_PLUS Line="46" Column="10" Position="776">
+<AST_LITERAL_INT Line="46" Column="10" Position="776">
+3</AST_LITERAL_INT>
+<AST_LITERAL_INT Line="46" Column="14" Position="780">
+5</AST_LITERAL_INT>
+</AST_EXPR_PLUS>
+</AST_DECLARATION_VALUE_PLACE>
+</AST_LIST>
+</AST_DECLARATION>
+<AST_STMT_RETURN Line="50" Column="9" Position="877">
+<AST_EXPR_LIST Line="50" Column="9" Position="877">
+<AST_EXPR_MUL Line="50" Column="9" Position="877">
+<AST_ID Line="50" Column="9" Position="877">
+x</AST_ID>
+<AST_LITERAL_INT Line="50" Column="13" Position="881">
+2</AST_LITERAL_INT>
+</AST_EXPR_MUL>
+</AST_EXPR_LIST>
+</AST_STMT_RETURN>
+</AST_STMT_BLOCK>
+</AST_DEF_FUNCTION_IMPL>
+</AST_LIST>

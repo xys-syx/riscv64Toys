@@ -1,0 +1,266 @@
+
+
+https://sourceware.org/binutils/docs/as/
+
+TODO:
+	
+	- program analysis
+		V control flow patterns for all statement primitives
+			V structured primitives
+			V jump-statements
+			- switch
+		- lexical scopes
+			V global scope
+			V local scopes
+			V variable registration
+		- expression trees
+			V review for typing
+			- init-expressions
+			- cast
+			- access
+			- sizeof, alignof
+		- correct literals parsing
+			- review lexer rules
+		- identifier resolution and get rid of CFG_EXPR_ID
+			V global scope defs
+			- local identifiers
+		- expression typings
+			V collect and propagate type info from defs
+			V augment referenced type with variable specification (arrays, pointers and such)
+		- compute actual liveness for CFG nodes and expressions
+			- traverse whole CFG and mark unreachable nodes for exclusion
+		- a bit of CFG optimization
+			- remove unused nodes
+		
+	- code generation
+		- learn RISC-V calling convention and method state
+		- generate code linear for basic expressions
+			- ...
+		- imports
+		- exports?
+
+CONSIDER:
+	- VLA and variably modified types
+		https://stackoverflow.com/questions/37371794/using-goto-to-jump-to-inner-or-sibling-scope
+		https://stackoverflow.com/questions/23529069/variably-modified-type-in-c-language
+	- types deduplication
+
+
+
+
+A language to write in: C
+A subset of C language to support:
+ - global functions definitions with arguments and return values
+ - global variables
+ - expressions (addition, subtraction, multiplication and division, modulo/comparison/logical operations).
+ - variables and constants of int and float types
+ - a few control-flow statements (blocks, if, while)
+ - arrays (multidimensional tables of int/float)
+
+
+A subset of target instruction set to support: at least these
+ - RV32I Base Integer Instructions: 
+add rd, rs1, rs2
+addi rd, rs1, imm12
+sub rd, rs1, rs2
+xor rd, rs1, rs2
+xori rd, rs1, imm12
+or rd, rs1, rs2
+ori rd, rs1, imm12
+and rd, rs1, rs2
+andi rd, rs1, imm12
+sll rd, rs1, rs2
+srl rd, rs1, rs2
+sra rd, rs1, rs2
+slt rd, rs1, rs2
+sgt rd, rs1, rs2
+lw rs, imm12(rd)
+sw rs2, imm12(rs1)
+ - RV32M Multiply Extension
+mul rd, rs1, rs2
+div rd, rs1, rs2
+rem rd, rs1, rs2
+ - Pseudo Instructions
+seqz rd, rs
+snez rd, rs
+beqz rs, label
+bnez rs, label
+j label
+call label
+ret
+li rd, imm
+la rd, label
+mv rd, rs
+
+
+An output target formats to support: assembly listing
+
+
+
+
+https://yandex.ru/search/?text=riscv64-as&from=os&clid=1836587&lr=2
+https://habr.com/ru/articles/454208/
+https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#user-content-fn-1-aad0c565224cb545e651ae4f0661e87c
+https://man7.org/linux/man-pages/man3/stdio.3.html
+
+
+
+
+
+char
+signed char
+short int
+int
+long int
+long long int
+
+float
+double
+long double
+
+float _Complex
+double _Complex
+long double _Complex
+
+
+
+https://programmerall.com/article/7696224803/
+https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#user-content-fn-1-aad0c565224cb545e651ae4f0661e87c
+https://github.com/riscv-non-isa/riscv-elf-psabi-doc/blob/master/riscv-cc.adoc
+https://eli.thegreenplace.net/2011/11/11/position-independent-code-pic-in-shared-libraries-on-x64
+https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf
+https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#sret
+https://msyksphinz-self.github.io/riscv-isadoc/html/rvm.html?highlight=mul
+https://msyksphinz-self.github.io/riscv-isadoc/html/index.html?highlight=mul
+https://github.com/portable-project/target-definitions/blob/master/definitions/research/RISC-V/RV32I.target.pdsl
+https://strumenta.com/rd-software-engineer/
+https://tomassetti.me/
+https://tomassetti.me/creating-a-reverse-dictionary/
+https://github.com/strumenta/
+
+
+
+
+riscv64-linux-gnu-gcc-10 -S -fverbose-asm -O0 -c -o ./test.c.o  ./test.c
+riscv64-linux-gnu-gcc-10 -S -fverbose-asm -O0 -c -o /dev/stdout ./test.c
+
+
+
+
+
+https://www.ibm.com/docs/en/zos/2.4.0?topic=initializers-initialization-arrays
+https://www.ibm.com/docs/en/zos/2.4.0?topic=initializers-designated-aggregate-types-c-only#designators
+https://www.google.com/search?q=c+type+%22long+long%22&ei=rixPZJzuCtOErgS3oqXwDQ&ved=0ahUKEwic_ZLckdP-AhVTgosKHTdRCd4Q4dUDCA4&uact=5&oq=c+type+%22long+long%22&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQFhAeMgYIABAWEB46CggAEEcQ1gQQsAM6BQgAEIAEOgcIABCKBRBDOggIABAWEB4QCjoICAAQFhAeEA86BwgAEBMQgAQ6CAgAEBYQHhATOgkIABANEBMQgARKBAhBGABQighY9BFglxNoAnABeACAAVOIAewFkgECMTGYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp
+https://stackoverflow.com/questions/2127473/what-kind-of-data-type-is-long-long
+https://learn.microsoft.com/en-us/cpp/c-language/pointer-declarations?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/c-language/based-pointers-c?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/c-language/c-abstract-declarators?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/c-language/interpreting-more-complex-declarators?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/c-language/overview-of-declarations?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/c-language/c-extended-storage-class-attributes?view=msvc-170
+
+
+
+https://shipilev.net/stuff/hack-ssa-regalloc.pdf
+https://cgo.org/cgo2010/talks/cgo10-ChristianWimmer.pdf
+https://www.excelsior.ru/files/pages/ll7.pdf
+https://programmerall.com/article/7696224803/
+https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
+https://eli.thegreenplace.net/2011/11/11/position-independent-code-pic-in-shared-libraries-on-x64
+
+
+https://en.cppreference.com/w/c/23
+https://gist.github.com/codebrainz/2933703
+https://www.quut.com/c/ANSI-C-grammar-l-2011.html
+https://www.quut.com/c/ANSI-C-grammar-y.html
+https://www.quut.com/c/
+https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf
+https://www.open-std.org/jtc1/sc22/wg14/
+https://www.iso.org/standard/74528.html
+https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf
+https://yandex.ru/search/?text=riscc-v+isa&from=os&clid=1836587&lr=2
+https://riscv.org/exchange/making-a-real-processor-step-by-step-using-risc-visa/
+https://riscv.org/technical/specifications/
+
+
+
+
+
+https://github.com/michaeljclark/rv8
+https://riscv.org/technical/specifications/
+https://wiki.debian.org/RISC-V
+https://colatkinson.site/linux/riscv/2021/01/27/riscv-qemu/
+https://habr.com/ru/articles/454208/
+https://habr.com/ru/articles/558706/
+https://github.com/portable-project/target-definitions/blob/master/definitions/research/RISC-V/RV32I.target.pdsl
+https://erik-engheim.medium.com/risc-v-assembly-code-examples-7bca0e7ebaa3
+https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
+https://smist08.wordpress.com/2019/09/07/risc-v-assembly-language-hello-world/
+https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf
+https://github.com/riscv-non-isa/riscv-elf-psabi-doc/blob/master/riscv-cc.adoc
+https://inst.eecs.berkeley.edu/~cs61c/resources/RISCV_Calling_Convention.pdf
+https://wiki.gentoo.org/wiki/Linux-headers
+https://www.google.com/search?q=visual+studio+linux+rsync+requirements&ei=omo3ZJDiKsPSxc8Pt4GzqAI&ved=0ahUKEwiQu4S36aX-AhVDafEDHbfADCUQ4dUDCA4&uact=5&oq=visual+studio+linux+rsync+requirements&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAEyBQghEKABOggIABCiBBCwAzoHCCEQoAEQCkoECEEYAVDABFieDmDvDmgCcAB4AIABwgGIAeoMkgEEMC4xMZgBAKABAcgBBcABAQ&sclient=gws-wiz-serp
+https://learn.microsoft.com/en-us/cpp/linux/connect-to-your-remote-linux-computer?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/linux/connect-to-your-remote-linux-computer?view=msvc-170
+https://learn.microsoft.com/en-us/cpp/linux/download-install-and-setup-the-linux-development-workload?view=msvc-170
+https://www.google.com/search?q=bison+c+grammar&ei=WW43ZN-MEqWNxc8Px9iYiAg&ved=0ahUKEwifnaj87KX-AhWlRvEDHUcsBoEQ4dUDCA4&uact=5&oq=bison+c+grammar&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQFhAeMgYIABAWEB46CggAEEcQ1gQQsAM6CggAEIoFELADEEM6DQgAEOQCENYEELADGAE6EgguENQCEIoFEMgDELADEEMYAjoPCC4QigUQyAMQsAMQQxgCOhIILhCKBRDUAhDIAxCwAxBDGAI6CgguEIoFEEMQ6gQ6BwgAEIoFEEM6BQgAEIAEOgUILhCABDoVCC4QigUQQxDqBBDcBBDeBBDfBBgDOgcIABCABBAKOg0IABCABBCxAxCDARAKSgQIQRgAUOIBWNkXYNwYaAJwAXgAgAGRAYgB2QmSAQQxLjEwmAEAoAEByAESwAEB2gEGCAEQARgJ2gEGCAIQARgI2gEGCAMQARgU&sclient=gws-wiz-serp
+https://www.quut.com/c/ANSI-C-grammar-y.html
+https://www.quut.com/c/ANSI-C-grammar-l-2011.html
+https://www.lysator.liu.se/c/ANSI-C-grammar-y.html
+https://gist.github.com/codebrainz/2933703
+http://www.compiler-tools.eu/
+http://www.compiler-tools.eu/slides/semantic.pdf
+https://en.wikipedia.org/wiki/Most_vexing_parse
+https://github.com/kranthikiran01/subc-compiler
+https://github.com/kranthikiran01/subc-compiler/blob/master/subc-compiler.l
+https://github.com/kranthikiran01/subc-compiler/blob/master/subc-compiler.y
+https://stackoverflow.com/questions/12731922/reforming-the-grammar-to-remove-shift-reduce-conflict-in-if-then-else
+https://www.gnu.org/software/bison/manual/html_node/Contextual-Precedence.html
+https://stackoverflow.com/questions/19991365/bison-prec-doesnt-work
+https://fog.misty.com/perry/osp/references/bison/by-section/bison_43.html
+https://www.gnu.org/software/bison/manual/html_node/Shift_002fReduce.html
+https://www.gnu.org/software/bison/manual/html_node/Non-Operators.html
+https://www.google.com/search?q=bison+parse+tree&source=hp&ei=koY3ZOvYJ5C9xc8P-fy22A0&iflsig=AOEireoAAAAAZDeUoiXQD_dc5mQhKARI8ofS6FeF8Utw&ved=0ahUKEwjr6ayJhKb-AhWQXvEDHXm-DdsQ4dUDCAg&uact=5&oq=bison+parse+tree&gs_lcp=Cgdnd3Mtd2l6EAMyCQgAEA0QgAQQEzIICAAQFhAeEBMyCAgAEBYQHhATMggIABAWEB4QEzIKCAAQFhAeEA8QEzoHCAAQigUQQzoKCC4QigUQ1AIQQzoLCAAQgAQQsQMQgwE6CAguEIAEELEDOhEILhCDARCvARDHARCxAxCABDoICAAQgAQQsQM6CwguEIAEELEDEIMBOgcILhCKBRBDOgsILhCABBDHARCvAToFCAAQgAQ6CwguEIAEEMcBENEDOgcIABANEIAEOgYIABAeEA06BggAEBYQHjoICAAQFhAeEA9QAFjDGGCuGmgAcAB4AIAB3AGIAdUPkgEGMy4xMi4xmAEAoAEB&sclient=gws-wiz
+https://github.com/gfrey/reentrant_flex_bison_parser
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/module.c
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/ast.c
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/ast.h
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/parser.y
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/scanner.l
+https://ru.manpages.org/stdarg/3
+https://stackoverflow.com/questions/18582205/linkedlist-struct-typedef-in-c
+https://www.geeksforgeeks.org/variadic-functions-in-c/
+https://github.com/llvm/llvm-project/issues/55492
+https://www.google.com/search?q=make+target+secondary+result&ei=XJg3ZNLKJfqXxc8PrOWB4AE&ved=0ahUKEwjS6OyElab-AhX6S_EDHaxyABwQ4dUDCA4&uact=5&oq=make+target+secondary+result&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQoAEyBQghEKABOgoIABBHENYEELADOgcIABCKBRBDOgsILhCABBDHARCvAToLCAAQgAQQsQMQgwE6BQgAEIAEOg0IABCKBRCxAxCDARBDOg0ILhCKBRDHARDRAxBDOggILhCABBDqBDoICC4QgAQQ1AI6EwguEIAEEOoEENwEEN4EEOAEGAE6BggAEBYQHjoICAAQFhAeEAo6BwghEKABEAo6BAghEBU6CAghEBYQHhAdOgoIIRAWEB4QDxAdSgQIQRgAUMoBWLpBYIFDaAJwAXgAgAGkAYgBxxGSAQQyMS40mAEAoAEByAEIwAEB2gEGCAEQARgU&sclient=gws-wiz-serp
+http://rus-linux.net/nlib.php?name=/MyLDP/algol/gnu_make/gnu_make_3-79_russian_manual.html#SEC101
+https://www.google.com/search?q=bison+parse-param&ei=c6A3ZJeuMtvixc8PrYK1oA8&oq=bison+parse-pa&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgUIABCABDoKCAAQRxDWBBCwAzoLCAAQgAQQsQMQgwE6CAguEIAEELEDOgcIABCKBRBDOgoILhCKBRDUAhBDOhEILhCDARCvARDHARCxAxCABDoICAAQgAQQsQM6CwguEIAEELEDEIMBOgsILhCABBDHARCvAToLCC4QgAQQsQMQ1AI6EAguEIoFELEDENQCEEMQ6gQ6BwguEIoFEEM6GwguEIoFELEDENQCEEMQ6gQQ3AQQ3gQQ3wQYAToFCC4QgAQ6CwguEIAEEMcBENEDOgYIABAWEB46CAgAEBYQHhAPOgoIABAWEB4QDxAKSgQIQRgAUOoKWJAjYLooaAFwAXgAgAFriAG-CZIBBDExLjOYAQCgAQHIAQfAAQHaAQYIARABGBQ&sclient=gws-wiz-serp
+https://stackoverflow.com/questions/34418381/how-to-reference-lex-or-parse-parameters-in-flex-rules
+
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/parser.y
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/scanner.l
+https://github.com/gfrey/reentrant_flex_bison_parser/blob/master/ast.h
+https://www.google.com/search?q=bison+%24%24+type&source=hp&ei=pN44ZJu6GoCSxc8PpumZiAw&iflsig=AOEireoAAAAAZDjstC8QDLwpiOuAAkmX1fGtK92Z9_E-&ved=0ahUKEwibnIKazKj-AhUASfEDHaZ0BsEQ4dUDCAg&uact=5&oq=bison+%24%24+type&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yCAgAEBYQHhAPMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOggIABCABBCxAzoICC4QgAQQsQM6CwgAEIAEELEDEIMBOhEILhCDARCvARDHARCxAxCABDoHCC4QigUQQzoLCC4QgAQQsQMQgwE6BQgAEIAEOgsILhCABBDHARCvAToLCC4QgAQQsQMQ1AI6DQguEIoFELEDENQCEEM6BwgAEIoFEEM6BwgAEIAEEBM6CAgAEBYQHhATUABY5xZg3hdoAHAAeACAAaoBiAGdC5IBAzQuOZgBAKABAQ&sclient=gws-wiz
+https://www.gnu.org/software/bison/manual/html_node/Type-Generation.html
+https://www.gnu.org/software/bison/manual/html_node/Type-Decl.html
+https://www.opennet.ru/docs/RUS/bison_yacc/bison_6.html
+https://www.gnu.org/software/bison/manual/html_node/Actions-and-Locations.html
+https://www.gnu.org/software/bison/manual/html_node/Semantics.html
+https://www.gnu.org/software/bison/manual/html_node/Value-Type.html
+https://www.gnu.org/software/bison/manual/html_node/Type-Decl.html
+https://www.gnu.org/software/bison/manual/html_node/Type-Generation.html
+https://www.gnu.org/software/bison/manual/html_node/Structured-Value-Type.html
+https://www.google.com/search?q=bison+api.value.type&ei=5OM4ZLfdONeAxc8P4KOZiAQ&ved=0ahUKEwi334-b0aj-AhVXQPEDHeBRBkEQ4dUDCA4&uact=5&oq=bison+api.value.type&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQ6CggAEEcQ1gQQsAM6BwgAEIoFEEM6BQguEIAEOgsILhCABBDHARCvAToGCAAQFhAeSgQIQRgAUPECWLcnYMgoaAFwAXgAgAFciAHyCJIBAjE1mAEAoAEByAEGwAEB&sclient=gws-wiz-serp
+https://www.gnu.org/software/bison/manual/html_node/Value-Type.html
+https://stackoverflow.com/questions/1014619/how-to-solve-bison-warning-has-no-declared-type
+https://stackoverflow.com/questions/69723227/default-data-type-in-yacc
+https://lists.gnu.org/archive/html/help-bison/2015-04/msg00001.html
+https://stackoverflow.com/questions/52807994/implementing-multiple-return-types-in-bison-semantic-rules
+https://wiki.eclipse.org/CDT/designs/Overview_of_Parsing
+https://stackoverflow.com/questions/32535097/problems-with-reentrant-flex-and-bison
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml" Layout="Sugiyama" GraphDirection="TopToBottom" >
+<Nodes>
+<Node Id="0" Label="#0&#10;&#10;&#10;default to #1" />
+<Node Id="1" Label="#1&#10;&#10;L34C8| ASSIGN(ENTITY_ID(&lt;pubVar&gt;), LITERAL_INT(&lt;123&gt;))&#10;L35C9| ASSIGN(ENTITY_ID(&lt;privVar&gt;), LITERAL_INT(&lt;456&gt;))&#10;L37C5| ASSIGN(ENTITY_ID(&lt;stdinfd&gt;), LITERAL_INT(&lt;0&gt;))&#10;L38C5| ASSIGN(ENTITY_ID(&lt;stdoutfd&gt;), LITERAL_INT(&lt;1&gt;))&#10;L39C5| ASSIGN(ENTITY_ID(&lt;stderrfd&gt;), LITERAL_INT(&lt;2&gt;))&#10;L41C7| ASSIGN(ENTITY_ID(&lt;str&gt;), LITERAL_STRING(&lt;&quot;Hello!\n&quot;&gt;))&#10;L43C6| CALL(ENTITY_ID(&lt;write&gt;), ENTITY_ID(&lt;stdoutfd&gt;), ENTITY_ID(&lt;str&gt;), LITERAL_INT(&lt;7&gt;))&#10;L45C5| ASSIGN(ENTITY_ID(&lt;x&gt;), ADD(LITERAL_INT(&lt;3&gt;), LITERAL_INT(&lt;5&gt;)))&#10;L49C8| RET(MUL(ENTITY_ID(&lt;x&gt;), LITERAL_INT(&lt;2&gt;)))&#10;&#10;returns value." />
+<Node Id="2" Label="#2&#10;&#10;&#10;default to #3" />
+<Node Id="3" Label="#3&#10;&#10;" />
+</Nodes>
+<Links>
+<Link Source="0" Target="1" />
+<Link Source="2" Target="3" />
+</Links>
+</DirectedGraph>
